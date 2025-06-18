@@ -1,0 +1,23 @@
+
+manifest:
+  # version: <west_version>
+
+  defaults:
+    remote: upstream
+
+  remotes:
+    - name: upstream
+      url-base: https://github.com/zephyrproject-rtos   # zephyr source code account
+
+  projects:
+    - name: zephyr          # project name, project name + remote is the repo of this project
+      description: zephyr rtos source code
+      revision: main        # label or commit id of project
+      clone-depth: 1        # only clone the last commit
+      import:               # import from west.yml of zephyr
+        path-prefix: external # create external folder of project
+        name-allowlist:     # import other modules from west.yml of zephyr
+          - cmsis_6         # required by the ARM port for Cortex-M
+
+  self:
+    path: west-manifest
