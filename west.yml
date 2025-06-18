@@ -18,6 +18,7 @@ manifest:
         path-prefix: external # create external folder of project
         name-allowlist:     # import other modules from west.yml of zephyr
           - cmsis_6         # required by the ARM port for Cortex-M
+          - hal_gigadevice  # required by the gd32e503z_eval board (GD32 based)
 
   self:
     path: west-manifest
