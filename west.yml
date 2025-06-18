@@ -7,12 +7,12 @@ manifest:
 
   remotes:
     - name: upstream
-      url-base: https://github.com/zephyrproject-rtos   # zephyr source code account
+      url-base: https://github.com/noobwang233/zephyr  # my test zephyr source code
 
   projects:
     - name: zephyr          # project name, project name + remote is the repo of this project
       description: zephyr rtos source code
-      revision: main        # label or commit id of project
+      revision: master      # label or commit id of project
       clone-depth: 1        # only clone the last commit
       import:               # import from west.yml of zephyr
         path-prefix: external # create external folder of project
