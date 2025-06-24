@@ -20,7 +20,10 @@ manifest:
           - cmsis           # required by the ARM port for Cortex-M CMSIS 5.x
           - cmsis_6         # required by the ARM port for Cortex-M CMSIS 6
           - cmsis-dsp
-          - hal_gigadevice  # required by the gd32e503z_eval board (GD32 based)
-
+    - name: hal_gigadevice  # required by the gd32e503z_eval board (GD32 based)
+      revision: main
+      path: external/modules/hal/gigadevice
+      groups:
+        - hal
   self:
     path: west-manifest
