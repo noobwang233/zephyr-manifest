@@ -7,7 +7,7 @@ manifest:
 
   remotes:
     - name: upstream
-      url-base: https://github.com/noobwang233/zephyr  # my test zephyr source code
+      url-base: https://github.com/noobwang233/  # my test zephyr source code
 
   projects:
     - name: zephyr          # project name, project name + remote is the repo of this project
@@ -17,7 +17,9 @@ manifest:
       import:               # import from west.yml of zephyr
         path-prefix: external # create external folder of project
         name-allowlist:     # import other modules from west.yml of zephyr
-          - cmsis_6         # required by the ARM port for Cortex-M
+          - cmsis           # required by the ARM port for Cortex-M CMSIS 5.x
+          - cmsis_6         # required by the ARM port for Cortex-M CMSIS 6
+          - cmsis-dsp
           - hal_gigadevice  # required by the gd32e503z_eval board (GD32 based)
 
   self:
