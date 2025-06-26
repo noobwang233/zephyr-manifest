@@ -1,0 +1,6 @@
+west-commands:
+  - file: commonds/my_west_extension.py
+    commands:
+      - name: my-command-name
+        class: MyCommand
+        help: one-line help for what my-command-name does

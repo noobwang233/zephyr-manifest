@@ -27,3 +27,4 @@ manifest:
         - hal
   self:
     path: west-manifest
+    west-commands: west-commands.yml
